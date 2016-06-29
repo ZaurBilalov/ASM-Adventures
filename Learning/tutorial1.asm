@@ -53,12 +53,3 @@
 			; esp(32bit) - Stack Pointer --> sp(16bit)
 			; ebp - Base Pointer
 		; And of course there are more
-	
-	; MOV - instructs to move data
-		; MOV destination, source
-		; data is copied
-		; mov eax, 8CBh -> h means base 16
-		; mov ecx, edx -> 32 bit copy
-		; mov si, cx -> 16 bit copy
-		
-		
