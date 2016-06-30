@@ -1,7 +1,6 @@
-	; The program is written in the memory
-	; The memory is made of Bits
-	; A byte is a set of 8 consecutive bits.
-	; They are represented by two Hexadecimal digits (Nibble).
+	; Tutorial 2
+	; Instructions
+	; Zaur Bilalov 2016
 	
 	; MOV - instructs to move data
 		; MOV destination, source
@@ -22,4 +21,4 @@
 			; Equicalent to destination <- destination + (-source), where -source is found by the two's complement method.
 	
 	
-; Exercises: 
+; Exercises: To be done if needed.
