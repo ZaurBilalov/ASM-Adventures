@@ -44,6 +44,37 @@
 			sub ecx,edx
 			; ecx == 0xfffffffd
 			; Carry flag is set to 1
-		
-		
-	
+			
+	; OF - Overflow flag
+		; Addition:
+			; Set if two positive numbers has a negative result
+			; Set if the addition of the two negative numbers has positive result
+		; Subtraction:
+			; Set if "positive-negative" has a negative result
+			; Set if "negative-positive" has a positive result
+		; Tells you if anything went wrong with the arithmetic calculation
+		; It checks the msb(most significant bit) to decide
+		; Ex:
+			mov al,7fh
+			mov cl,1h
+			add al,cl
+			; al == 0x80
+			;Overflow Flag is set
+		; Ex:
+			mov eax,7fffffffh
+			mov edx,1h
+			add eax,edx
+			; eax == 0x80000000
+			; Overflow is set
+		; Ex:
+			mov eax,7fffffffh
+			mov edx,1h
+			sub eax,edx
+			; eax == 0x7ffffffe
+			; OF is cleared
+		; Ex:
+			mov dx,6342h
+			mov cx,2000h
+			add cx,dx
+			; cx = 0x8342
+			; overflow is set
