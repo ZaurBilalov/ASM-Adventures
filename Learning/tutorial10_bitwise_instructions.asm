@@ -1,6 +1,8 @@
 	; Tutorial 10
-	; Birwise Instructions and Operations
+	; Bitwise Instructions and Operations
 	; Zaur Bilalov 2016	
+	
+	; Check /code/ folder for practical codes
 	
 	NOT dest
 		; NOT flips every bit
@@ -39,5 +41,23 @@
 	SHR dest,k
 		; Shifts bits k units to left or right and makes carry the last bit kicked out of the boundary
 		; The K can only be a small number or the CL register
-	
-		
+		; Left Shift is multiplication by 2 (10 in decimals)
+		;(!) Right shift is division by 2 (does not divide in signed numbers).
+	SAR dest,k
+			; Sign understanding versions of SHR
+	SAL desk,k
+			; Just a different name for SHL
+			
+	ROL dest,k
+		; Rotates the bits of dest k times to the left
+		; Carry contains the last bit shifted
+								; k can be a small number or the CL register
+	ROR dest,k
+		; Rotates the bits of dest k times to the right
+		; Carry contains the last bit shifted
+								; k can be a small number or the CL register
+		; Ex:
+		mov al,01001011b
+		ror al,1
+		; 	al = 10100101
+		;	carry = 1
