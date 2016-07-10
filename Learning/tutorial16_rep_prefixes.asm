@@ -55,3 +55,11 @@
 			xor 	al,al
 			
 			repnz scasb
+			
+	; REPNZ - repeat as long as not zero (as long as ZF=0)
+	; REPZ	- repeat as long as zero (as long as ZF=1)
+
+	; CMPS - Compare string operand --> sets flags
+		CMPSB				; cmp [esi] [edi]
+		CMPSW				; cmp [esi] [edi]
+		CMPSD				; cmp [esi] [edi]
